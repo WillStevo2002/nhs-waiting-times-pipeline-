@@ -1,3 +1,4 @@
+-- Monthly Trend Creation
 CREATE VIEW monthly_trend AS
 
 SELECT
@@ -6,7 +7,7 @@ SELECT
 FROM waiting_times
 GROUP BY reporting_month;
 
-
+-- Health Board Comparison Creation
 CREATE VIEW health_board_comparison AS
 
 SELECT
