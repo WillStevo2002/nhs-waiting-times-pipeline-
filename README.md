@@ -6,6 +6,9 @@ nhs-waiting-times-pipeline/
 
 This project demonstrates a data engineering workflow for ingesting, validating, transforming and loading NHS waiting times data.
 
+
+I have limited this to 5000 rows, Due to the size constraints of Git. However I have tested this locally and it is working wiht a roughly 250mb file.
+
 ## Architecture
 
 CSV Source
