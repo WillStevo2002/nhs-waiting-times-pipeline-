@@ -1,1 +1,36 @@
+# Name shown in the GitHub Actions tab
+name: Tests
 
+# Trigger the workflow whenever code is pushed
+on:
+  push:
+
+jobs:
+
+  # Name of the job
+  test:
+
+    # Create a temporary Ubuntu machine
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Download the repository contents
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Install Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Install project dependencies
+      - name: Install Dependencies
+        run: |
+          pip install pandas
+          pip install pytest
+
+      # Run automated tests
+      - name: Run Tests
+        run: pytest
